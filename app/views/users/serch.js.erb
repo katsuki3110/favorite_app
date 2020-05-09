@@ -1,0 +1,4 @@
+$('#users').html(
+    "<%= escape_javascript(render partial: '',
+                                  local: {user: @user}) %>"
+)

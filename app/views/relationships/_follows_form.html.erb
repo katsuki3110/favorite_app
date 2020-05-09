@@ -1,0 +1,2 @@
+follow：<%= link_to @user.followings.count, following_user_path(@user) %>
+follower：<%= link_to @user.followers.count, followed_user_path(@user) %>

@@ -1,0 +1,9 @@
+$('#follow_btn').html(
+    "<%= escape_javascript(render partial: 'relationships/follow_form',
+                                  local: {user: @user}) %>"
+)
+
+$('#follows').html(
+    "<%= escape_javascript(render partial: 'relationships/follows_form',
+                                  local: {user: @user}) %>"
+)

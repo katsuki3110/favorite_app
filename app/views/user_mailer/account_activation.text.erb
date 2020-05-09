@@ -1,0 +1,7 @@
+こんにちは、<%= @user.name %>
+
+ようこそ、Titleへ！！
+
+下記のリンクをクリックし、アカウントを有効にしてください↓↓
+
+<%= edit_account_activation_url(@user.activation_token, email: @user.email) %>

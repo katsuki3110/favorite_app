@@ -1,0 +1,42 @@
+<div class="UserEdit-wrapper">
+  <%= form_with(model: @user, local: true) do |form| %>
+    <%= render 'layouts/error_message', object: form.object %>
+
+    <div class="UserEdit-content">
+      <div class="UserEdit-left">
+        <div class="UserEdit-image-wrapper">
+          <li><%= link_to image_tag(@user.image_user_url, class: "UserEdit-image"),
+                          edit_image_user_path(@user) %></li>
+          <i class="fas fa-2x fa-camera UserEdit-fontImage"></i>
+        </div>
+      </div>
+
+      <div class="UserEdit-form">
+        <%= form.label :名前, {class: "form-label"} %>
+        <%= form.text_field :name, {id: "UserEdit-name",
+                                    class: "form-field UserEdit-name",
+                                    maxlength: 30} %>
+        <p id="name-counter"><%= @user.name.length %>文字 / 30文字</p>
+
+        <%= form.label :自己紹介, {class: "form-label"} %>
+        <%= form.text_area :introduction, {id: "UserEdit-introduction",
+                                           class: "form-field UserEdit-introduction",
+                                           maxlength: 180} %>
+
+        <p id="introduction-counter">
+          <% if @user.introduction.present? %>
+            <%= @user.introduction.length %>文字 / 180文字
+          <% else %>
+            0文字 / 180文字
+          <% end %>
+        </p>
+
+        <%= form.submit "更新する", {class: "btn UserEdit-btn"} %>
+
+      </div>
+    </div>
+
+
+
+  <% end %>
+</div>

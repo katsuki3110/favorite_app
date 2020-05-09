@@ -1,0 +1,45 @@
+<div class="PostEdit-wrapper">
+  <h1>投稿の編集</h1>
+
+    <%= form_with(model: @post, local: true) do |form| %>
+      <%= render 'layouts/error_message', object: form.object %>
+
+      <div class="PostEdit-form">
+        <%= form.label :タイトル, {class: "form-label"} %>
+        <%= form.text_field :title, {class: "form-field PostTitle-field",
+                                     id: "PostTitle",
+                                     maxlength: 30} %>
+      <p class="counter" id="PostTitle-counter"><%= @post.title.length %>文字 / 30文字</p>
+
+      <div class="PostImage-form-wrapper">
+        <%= form.label :記事画像, {class: "form-label PostImage-label"} %>
+        <%= form.file_field :image_post, {class: "form-field PostImage-field"} %>
+      </div>
+
+      <div class="PostPlace-form-wrapper">
+        <%= form.label :地名, {class: "form-label"} %>
+        <%= form.text_field :place, {class: "form-field PostPlace-field",
+                                     id: "PostPlace",
+                                     maxlength: 10} %>
+        <p class="counter" id="PostPlace-counter"><%= @post.place.length %>文字 / 10文字</p>
+      </div>
+
+      <div class="PostOverview-form-wrapper">
+        <%= form.label :概要, {class: "form-label PostOverview-label"} %>
+        <%= form.text_area :overview, {class: "form-field PostOverview-field",
+                                       id: "PostOverview",
+                                       maxlength: 100} %>
+        <p class="counter" id="PostOverview-counter"><%= @post.overview.length %>文字 / 100文字</p>
+      </div>
+
+
+      <%= form.fields_for :spots do |spot| %>
+        <%= render 'spots/spot_edit', f: spot %>
+      <% end %>
+
+      <%= form.submit "更新する", {class: "btn PostEdit-btn"} %>
+
+    <% end %>
+
+  </div>
+</div>

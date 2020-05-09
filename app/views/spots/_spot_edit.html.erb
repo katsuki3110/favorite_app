@@ -1,0 +1,14 @@
+<div class="SpotEdit-fields nested-fields">
+  <%= f.label :スポット名, {class: "form-label"} %>
+  <%= f.text_field :place, {class: "form-field SpotPlace-field",
+                               maxlength: 20} %>
+  <p class="counter SpotPlace-counter"><%= f.object.place.length %>文字 / 20文字</p>
+
+  <%= f.label :スポット画像, {class: "form-label SpotImage-label"} %>
+  <%= f.file_field :image_spot, {class: "form-field SpotImage-field"} %>
+
+  <%= f.label :スポットの見所, {class: "form-label"} %>
+  <%= f.text_area :explaine, {class: "form-field SpotExplaine-field",
+                                 maxlength: 300} %>
+  <p class="counter SpotExplaine-counter"><%= f.object.explaine.length %>文字 / 300文字</p>
+</div>

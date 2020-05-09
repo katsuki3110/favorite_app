@@ -1,0 +1,24 @@
+<div class="UserIndex-item">
+  <div class="UserIndex-left">
+    <% if user.image_user.present? %>
+      <%= image_tag(user.image_user_url(:thumb), class: "UserIndex-image") %>
+    <% else %>
+      <img src="/assets/default_user_mini.png">
+    <% end %>
+    <% if current_user && current_user.admin? && !current_user?(user) %>
+      <%= link_to "削除", admin_destroy_user_path(user), {class: "UserIndex-delete",
+                                                         method: :delete,
+                                                         data:{confirm: "#{user.name}さんを削除していいですか？"}} %>
+    <% end %>
+  </div>
+
+  <div class="UserIndex-right">
+    <div>
+      <%= link_to user.name, user_path(user), {class: "Link UserIndex-name"} %>
+    </div>
+
+    <div class="UserIndex-postCount">
+      投稿数：<%= user.posts.count %>
+    </div>
+  </div>
+</div>

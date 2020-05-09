@@ -1,3 +1,46 @@
 // Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.TopTitle-wrapper{
+  position: relative;
+}
+
+.TopTitle-wrapper img{
+  width: 100%;
+  height: 630px;
+}
+
+.TopTitle-text-wrapper h1{
+  font-size: 80px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.TopTitle-text-wrapper{
+  position: absolute;
+  top:  55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.TopExplaine-wrapper{
+  text-align: center;
+  font-size: 17px;
+  color: black;
+}
+
+.Top-Link-wrapper{
+  margin-top: 40px;
+}
+
+.Top-Link{
+  cursor: pointer;
+  color: black;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.Top-Link:hover{
+  opacity: 0.7;
+}

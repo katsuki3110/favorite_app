@@ -1,0 +1,59 @@
+<div class="PostShow-wrapper">
+
+
+  <div class="PostShow-image-wrapper">
+    <% if @post.image_post.present? %>
+      <%= image_tag(@post.image_post_url, class: "PostShow-image") %>
+    <% else %>
+      <div class="PostShow-image">No Image</div>
+    <% end %>
+
+
+    <div class="PostShow-currentOnly">
+      <% if current_user?(@post.user) %>
+        <div class="PostShow-edit-wrapper">
+          <%= link_to edit_post_path(@post) do %>
+            <i class="far fa-2x fa-edit currentOnly"></i>
+          <% end %>
+        </div>
+        <div class="PostShow-delete-wrpper">
+          <%= link_to post_path(@post), {method: :delete, data:{confirm: "この記事を削除しますか？"}} do %>
+            <i class="far fa-2x fa-trash-alt currentOnly"></i>
+          <% end %>
+        </div>
+      <% end %>
+    </div>
+
+  </div>
+
+  <div class="PostShow-info">
+    <div class="PostShow-date">
+      <i class="fas fa-pencil-alt"></i>
+      ：<%= l @post.created_at %>
+    </div>
+    <div class="PostShow-name">
+      <i class="far fa-user"></i>
+      ：<u><%= link_to @post.user.name, user_path(@post.user), {class: "Link"} %></u>
+    </div>
+  </div>
+
+  <div class="PostShow-title-wrapper">
+    <%= @post.title %>
+    <div class="PostShow-place-wrapper">
+      <i class="fas fa-map-marker-alt PostShow-fontPlace"></i>
+      <%= @post.place %>
+    </div>
+  </div>
+</div>
+
+<div class="PostShow-overview-wrapper">
+  <%= @post.overview %>
+</div>
+
+<div class="Spot-items">
+  <%= render @spots %>
+</div>
+
+<div id="like_btn">
+  <%= render 'likes/like_form', post: @post, like: @like %>
+</div>

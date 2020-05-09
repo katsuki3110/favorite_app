@@ -1,3 +1,234 @@
 // Place all the styles related to the users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.UserCreate-wrapper, .UserSetting-wrapper, .imageUpload-wrapper{
+  padding-top: 50px;
+}
+
+.UserCreate-wrapper h1, .UserSetting-wrapper h1, .imageUpload-wrapper h1{
+  text-align: center;
+}
+
+.UserCreate-form, .UserSetting-form, .imageUpload-form{
+  width: 400px;
+  margin: auto;
+  padding-top: 15px;
+}
+
+.User-field{
+  margin-bottom: 20px;
+  height: 30px;
+}
+
+.User-btn{
+  margin-top: 20px;
+}
+
+.UserProfile-wrapper{
+  position: absolute;
+  width: 1000px;
+  top: 100px;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.UserProfile-left{
+  float: left;
+  margin-right: 50px;
+}
+
+.UserProfile-image{
+  width: 350px;
+  height: 350px;
+  object-fit: cover;
+}
+
+.UserProfile-right{
+  float: left;
+  width: 520px;
+}
+
+.UserProfile-name{
+  font-size: 25px;
+  height: 80px;
+  margin-top: 40px;
+}
+
+.UserProfile-introduction{
+  font-size: 17px;
+  height: 170px;
+  word-break : break-all;
+  margin-top: 30px;
+}
+
+.UserProfile-editLink{
+  margin-left: 730px;
+}
+
+.editLink{
+  font-size: 15px;
+  font-weight: bold;
+  padding: 11px 13px 6px 13px;
+  background-color: white;
+  border: 1px solid #a1887f;
+  border-radius: 100px;
+}
+
+.UserProfile-PostItems-wrapper{
+  padding: 600px 60px 150px;
+}
+
+.UserProfile-tab{
+  margin-bottom: 50px;
+}
+
+.tab-posts, .tab-likes{
+  float: left;
+  padding: 5px;
+  margin-right: 10px;
+}
+
+.tab-posts a, .tab-likes a{
+  color: #e0e0ec;
+}
+
+.tab-posts a:hover, .tab-likes a:hover{
+  color: #a1887f;
+}
+
+.active a{
+  color: #a1887f;
+}
+
+#UserProfile-PostItems{
+  padding-top: 50px;
+}
+
+.UserProfile-PostItems{
+  text-align: center;
+}
+
+.UserIndex-wrapper{
+  padding: 70px 60px;
+}
+
+.UserIndex-items{
+  margin-bottom: 30px;
+}
+
+.UserIndex-item{
+  margin-top: 30px;
+  margin-left: 60px;
+  width: 1200px;
+  border-bottom: 1px solid #e0e0ec;
+}
+
+.UserIndex-left{
+  display: inline-block;
+  position: relative;
+}
+
+.UserIndex-image{
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+}
+
+.UserIndex-delete{
+  position: absolute;
+  top: 6px;
+  left: 5px;
+  color: #e0e0ec;
+}
+
+.UserIndex-delete:hover{
+  color: black;
+}
+
+.UserIndex-right{
+  display: inline-block;
+}
+
+.UserIndex-name{
+  font-size: 23px;
+}
+
+.UserIndex-postCount{
+  opacity: 0.5;
+}
+
+.UserEdit-content{
+  position: absolute;
+  width: 1000px;
+  top: 100px;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.UserEdit-left{
+  float: left;
+  margin-top: 22px;
+  margin-right: 50px;
+}
+
+.UserEdit-image-wrapper{
+  position: relative;
+}
+
+.UserEdit-image{
+  -ms-filter: blur(3px);
+  filter: blur(3px);
+  width: 350px;
+  height: 350px;
+  object-fit: cover;
+}
+
+.UserEdit-image:hover{
+  opacity: 0.5;
+}
+
+.UserEdit-fontImage{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #e0e0ec;
+}
+
+.UserEdit-form{
+  float: left;
+  width: 520px;
+}
+
+.UserEdit-name{
+  height: 30px;
+  margin: 10px 0 0px;
+}
+
+.UserEdit-introduction{
+  height: 170px;
+  resize: none;
+  font-size: 17px;
+  word-break : break-all;
+  margin: 10px 0 0px;
+}
+
+#introduction-counter, #name-counter{
+  display: inline;
+  margin-left: 365px;
+}
+
+.UserEdit-btn{
+  width: 100%;
+  height: 30px;
+  font-size: 15px;
+  margin-top: 15px;
+}
+
+.imageUpload-field{
+  display: block;
+  font-size: 20px;
+  width: 100%;
+  margin: 30px 0 60px 30px;
+}

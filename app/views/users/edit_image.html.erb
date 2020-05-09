@@ -1,0 +1,17 @@
+<div class="imageUpload-wrapper">
+  <h1>画像のアップロード</h1>
+
+  <div class="imageUpload-form">
+    <%= form_with(model: @user, url: update_image_user_path(@user), scope: :image,
+                                                                    local: true,
+                                                                    method: :patch) do |form| %>
+      <%= render 'layouts/error_message', object: form.object %>
+
+      <%= form.file_field :image_user, {class: "imageUpload-field"} %>
+      <%= form.hidden_field :image_user_cashe %>
+
+      <%= form.submit "アップロード", {class: "btn form-btn"} %>
+
+    <% end %>
+  </div>
+</div>

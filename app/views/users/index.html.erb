@@ -1,0 +1,23 @@
+<% if @serch.present? %>
+  <div class="serch">
+    ”<%= @serch %>”の検索結果
+  </div>
+<% end %>
+
+<% if @title.present? %>
+  <h1 class="title">
+    <%= @title %>
+  </h1>
+<% end %>
+
+<div class="UserIndex-wrapper">
+
+  <%= paginate @users %>
+
+  <div class="UserIndex-items">
+    <%= render @users %>
+  </div>
+
+  <%= paginate @users %>
+
+</div>

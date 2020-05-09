@@ -1,0 +1,22 @@
+<div class="UserSetting-wrapper">
+  <h1>個人情報の変更</h1>
+
+  <%= form_with(model: @user, url: update_setting_user_path(@user), scope: :setting,
+                                                 local: true) do |form| %>
+    <%= render 'layouts/error_message', object: form.object %>
+
+    <div class="UserSetting-form">
+      <%= form.label :メール, {class: "form-label"} %>
+      <%= form.email_field :email, {class: "form-field User-field"} %>
+
+      <%= form.label :パスワード, {class: "form-label"} %>
+      <%= form.password_field :password, {class: "form-field User-field"} %>
+
+      <%= form.label :パスワード確認, {class: "form-label"} %>
+      <%= form.password_field :password_confirmation, {class: "form-field User-field"} %>
+
+      <%= form.submit "更新する", {class: "btn form-btn User-btn"} %>
+
+    <% end %>
+    </div>
+</div>

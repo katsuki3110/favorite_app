@@ -1,0 +1,42 @@
+ja:
+  views:
+    pagination:
+      first: "&laquo; 最初"
+      last: "最後 &raquo;"
+      previous: "&raquo;"
+      next: "次 &rsaquo;"
+      truncate: "..."
+  time:
+    formats:
+      default: "%Y/%m/%d"
+  activerecord:
+    models:
+      user:
+      post:
+      spot:
+      relationship:
+      like:
+    attributes:
+      user:
+        name: 名前
+        email: メール
+        password_digest: パスワード
+        admin:
+        image_user: プロフィール画像
+      post:
+        user_id:
+        title: タイトル
+        image_post: 記事画像
+        place: 地名
+        overview: 概要
+      spots:
+        post_id:
+        place: スポット名
+        image_spot: スポット画像
+        explaine: スポットポイント
+      relationship:
+        follows_user:
+        followed_user:
+      like:
+        user_id:
+        posts_id:

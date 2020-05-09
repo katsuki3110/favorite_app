@@ -1,0 +1,11 @@
+<% if @serch.present? %>
+  <div class="serch">
+    ”<%= @serch %>”の検索結果
+  </div>
+<% end %>
+
+<div class="PostIndex-wrapper">
+
+  <%= render 'posts/index' %>
+
+</div>

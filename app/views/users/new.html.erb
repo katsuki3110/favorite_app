@@ -1,21 +1,23 @@
-<div class="">
-  <div class="">
-    <%= form_with(model:@user, local:true) do |form| %>
-      <%= render 'layouts/error_message', object: form.object %>
+<div class="UserCreate-wrapper">
+  <h1>新規登録</h1>
 
-      <%= form.label :name %>
-      <%= form.text_field :name %>
+  <%= form_with(model: @user, local: true) do |form| %>
+    <%= render 'layouts/error_message', object: form.object %>
 
-      <%= form.label :email %>
-      <%= form.email_field :email %>
+    <div class="UserCreate-form">
+      <%= form.label :名前, {class: "form-label"} %>
+      <%= form.text_field :name, {class: "form-field User-field"} %>
 
-      <%= form.label :password %>
-      <%= form.password_field :password %>
+      <%= form.label :メール, {class: "form-label"} %>
+      <%= form.email_field :email, {class: "form-field User-field"} %>
 
-      <%= form.label :password_confirmation %>
-      <%= form.password_field :password_confirmation %>
+      <%= form.label :パスワード（8文字以上）, {class: "form-label"} %>
+      <%= form.password_field :password, {class: "form-field User-field"} %>
 
-      <%= form.submit "Create account!" %>
+      <%= form.label :パスワード確認, {class: "form-label"} %>
+      <%= form.password_field :password_confirmation, {class: "form-field User-field"} %>
+
+      <%= form.submit "新規登録", {class: "btn form-btn User-btn"} %>
 
     <% end %>
   </div>

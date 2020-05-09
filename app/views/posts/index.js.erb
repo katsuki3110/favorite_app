@@ -1,0 +1,12 @@
+$('#UserProfile-PostItems').html(
+    "<%= escape_javascript(render partial: 'posts/index',
+                                  local: {post: @posts}) %>"
+)
+
+//タブの切り替え
+$('.tab-posts, .tab-likes').removeClass('active');
+"<% if @flg == "1" %>"
+  $('.tab-posts').addClass('active');
+"<% elsif @flg == "2" %>"
+  $('.tab-likes').addClass('active');
+" <% end %>"

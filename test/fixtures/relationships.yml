@@ -1,0 +1,7 @@
+one:
+  following_id: 1
+  followed_id:  2
+
+two:
+  following_id: 2
+  followed_id:  3

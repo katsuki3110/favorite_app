@@ -1,0 +1,52 @@
+<div class="UserProfile-wrapper">
+  <% if current_user?(@user) %>
+    <div class="UserProfile-editLink">
+      <%= link_to "プロフィールを編集", edit_user_path, {class: "Link editLink"} %>
+    </div>
+  <% else %>
+    <div id="follow_btn">
+      <%= render 'relationships/follow_form', user: @user %>
+    </div>
+  <% end %>
+
+  <div class="UserProfile-left">
+    <div class="UserProfile-image-wrapper">
+      <%= image_tag(@user.image_user_url, class: "UserProfile-image") %>
+    </div>
+    <div id="follows">
+      <%= render 'relationships/follows_form', user: @user %>
+    </div>
+  </div>
+
+  <div class="UserProfile-right">
+    <div class="UserProfile-name">
+        <%= @user.name %>
+    </div>
+    <div class="UserProfile-introduction">
+      <%= @user.introduction %>
+    </div>
+  </div>
+</div>
+
+<div class="UserProfile-PostItems-wrapper">
+  <ul class="UserProfile-tab">
+    <li class="tab-posts active">
+      <%= link_to posts_path(user_id: @user.id, flg: "1"), remote: true do %>
+        <i class="fas fa-tag">投稿記事</i>
+      <% end %>
+    </li>
+    <li class="tab-likes">
+      <%= link_to posts_path(user_id: @user.id, flg: "2"), remote: true do %>
+        <i class="fas fa-tag">お気に入り</i>
+      <% end %>
+    </li>
+  </ul>
+
+  <div id="UserProfile-PostItems">
+    <%= paginate @posts %>
+    <div class="UserProfile-PostItems">
+      <%= render @posts %>
+    </div>
+    <%= paginate @posts %>
+  </div>
+</div>

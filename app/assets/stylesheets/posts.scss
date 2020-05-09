@@ -1,0 +1,286 @@
+// Place all the styles related to the posts controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.PostCreate-wrapper, .PostEdit-wrapper{
+  padding-top: 50px;
+}
+
+.PostCreate-wrapper h1, .PostEdit-wrapper h1{
+  text-align: center;
+}
+
+.PostCreate-form, .PostEdit-form{
+  width: 650px;
+  margin: 60px auto;
+}
+
+.PostTitle-field{
+  height: 40px;
+}
+
+.PostImage-form-wrapper{
+  display: inline-block;
+}
+
+.PostImage-label{
+  margin-top: 40px;
+}
+
+.PostImage-field{
+  margin-bottom: 40px;
+}
+
+.PostPlace-form-wrapper{
+  width: 300px;
+}
+
+.PostPlace-field{
+  height: 35px;
+}
+
+.PostOverview-label{
+  margin-top: 30px;
+}
+
+.PostOverview-field{
+  resize: none;
+  height: 150px;
+}
+
+
+
+.nested-fields{
+  width: 550px;
+  margin: auto;
+}
+
+.SpotEdit-fields{
+  margin-top: 70px;
+}
+
+.remove-link{
+  visibility: hidden;
+}
+
+.SpotPlace-field{
+  resize: none;
+  height: 30px;
+  word-break: break-all;
+}
+
+.SpotExplaine-field{
+  resize: none;
+  height: 250px;
+}
+
+.SpotImage-label{
+  margin-top: 30px;
+}
+
+.SpotImage-field{
+  margin-bottom: 30px;
+}
+
+.counter{
+  display: inline;
+}
+
+#PostTitle-counter, #PostOverview-counter{
+  margin-left: 480px;
+}
+
+#PostPlace-counter{
+  margin-left: 150px;
+}
+
+.SpotPlace-counter, .SpotExplaine-counter{
+  margin-left: 380px;
+}
+
+.PostCreate-btn, .PostEdit-btn{
+  width: 550px;
+  height: 50px;
+  font-size: 20px;
+  margin: 100px 50px;
+}
+
+.fa-plus{
+  margin-left: 50px;
+  color: gray;
+}
+
+.fa-times{
+  margin-top: 60px;
+  margin-left: 530px;
+  color: gray;
+}
+
+.fa-times:hover, .fa-plus:hover{
+  opacity: 0.7;
+}
+
+
+.PostIndex-wrapper{
+  padding: 70px 60px;
+}
+
+.PostIndex-items{
+  text-align: center;
+}
+
+.PostIndex-item{
+  display: inline-block;
+  width: 30%;
+  height: 430px;
+  margin: 40px 1%;
+  border: 2px solid #e0e0ec;
+}
+
+.PostIndex-image-wrapper{
+  margin-top: 20px;
+  position: relative;
+}
+
+.PostIndex-image{
+  width: 350px;
+  height: 220px;
+  object-fit: cover;
+  background-color: #e0e0ec;
+  margin: auto;
+  line-height: 220px;
+  font-size: 20px;
+}
+
+.PostIndex-title-wrapper{
+  height: 100px;
+  font-size: 25px;
+  font-weight: bold;
+  margin-top: 20px;
+  padding: 0 10px;
+}
+
+.PostIndex-info{
+  padding-top: 20px;
+  opacity: 0.7;
+}
+
+.yellow{
+  color: #FFCC00;
+}
+
+.PostShow-wrapper{
+  position: relative;
+}
+
+.PostShow-image-wrapper{
+  text-align: center;
+  padding-top: 30px;
+}
+
+.PostShow-image{
+  width: 700px;
+  height: 450px;
+  object-fit: cover;
+  background-color: #e0e0ec;
+  line-height: 450px;
+  font-size: 50px;
+  margin: auto;
+}
+
+.PostShow-info{
+  position: absolute;
+  top: 7px;
+  left: 50%;
+  transform: translate(-350px, 480px);
+}
+
+.PostShow-date{
+  display: inline;
+  margin-right: 10px;
+}
+
+.PostShow-name{
+  display: inline;
+}
+
+.PostShow-currentOnly{
+  position: absolute;
+  transform: translate(1070px, -455px);
+}
+
+.currentOnly{
+  color: black;
+}
+
+.PostShow-delete-wrpper{
+  margin-top: 20px;
+}
+
+.currentOnly:hover{
+  opacity: 0.7;
+}
+
+.PostShow-title-wrapper{
+  font-size: 45px;
+  width: 750px;
+  margin: 45px auto 0;
+  font-weight: bold;
+}
+
+.PostShow-place-wrapper{
+  padding-top: 5px;
+  font-size: 20px;
+  font-weight: normal;
+}
+
+.PostShow-fontPlace{
+  color: red;
+}
+
+.PostShow-overview-wrapper{
+  font-size: 20px;
+  width: 800px;
+  margin: 80px auto 80px;
+}
+
+.Spot-place-wrapper{
+  font-size: 35px;
+  font-weight: bold;
+  border-left: 4px solid black;
+  margin-bottom: 50px;
+  margin-left: 100px;
+  padding-left: 10px;
+}
+
+.Spot-contents-wrapper{
+  width: 1100px;
+  height: 500px;
+  margin: 0 auto;
+}
+
+.Spot-explaine-wrapper{
+  float: left;
+  font-size: 17px;
+  word-break: break-all;
+  width: 500px;
+  text-align: left;
+  margin-top: 50px;
+  padding: 0 10px;
+}
+
+.Spot-image-wrapper{
+  float: left;
+  margin-right: 30px;
+}
+
+.Spot-image{
+  width: 530px;
+  height: 400px;
+  object-fit: cover;
+  background-color: #e0e0ec;
+  line-height: 400px;
+  font-size: 25px;
+  margin: auto;
+  text-align: center;
+}

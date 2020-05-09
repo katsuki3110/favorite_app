@@ -1,0 +1,9 @@
+postOne:
+  user: one
+  title: "postTitle"
+  place: "postPlace"
+
+postTwo:
+  user: two
+  title: "postTitle"
+  place: "postPlace"

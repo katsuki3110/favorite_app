@@ -1,2 +1,14 @@
-<h1>Home#top</h1>
-<p>Find me in app/views/home/top.html.erb</p>
+<div class="TopTitle-wrapper">
+  <img src="/assets/Top.jpg">
+
+  <div class="TopTitle-text-wrapper">
+    <h1>TITLE</h1>
+
+    <div class="TopExplaine-wrapper">
+      <p>あなたが知っているお気に入りのモデルコースをシェアするSNSサービスです。</p>
+      <p>メジャーなスポットから穴場スポットまで、幅広く紹介されています!</p>
+      <p class="Top-Link-wrapper"><%= link_to 'さっそくチェック', posts_path, {class:"Top-Link"} %></p>
+    </div>
+  </div>
+
+</div>

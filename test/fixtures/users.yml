@@ -1,15 +1,19 @@
-# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
-
 one:
-  name: one
-  email: one@test.com
-  password_digest:
-  admin: true
-  introduction: MyText
+ name: one
+ email: one@test.com
+ password_digest: <%= User.digest('password') %>
+ introduction: introduction
+ image_user: open("./public/images/default-user-image.png")
+ admin: true
+ activated: true
+ activated_at: <%= Time.zone.now %>
 
 two:
-  name: two
-  email: two@test.com
-  password_digest: 
-  admin: false
-  introduction: MyText
+ name: two
+ email: two@test.com
+ password_digest: <%= User.digest('password') %>
+ introduction: introduction
+ image_user: open("./public/images/default-user-image.png")
+ admin: false
+ activated: true
+ activated_at: <%= Time.zone.now %>

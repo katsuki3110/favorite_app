@@ -1,0 +1,56 @@
+<div class="PostCreate-wrapper">
+  <h1>お気に入りのコースを投稿しよう</h1>
+
+  <%= form_with(model: @post, local: true) do |form| %>
+    <%= render 'layouts/error_message', object: form.object %>
+
+    <div class="PostCreate-form">
+      <%= form.label :タイトル, {class: "form-label"} %>
+      <%= form.text_field :title, {class: "form-field PostTitle-field",
+                                   id: "PostTitle",
+                                   maxlength: 30} %>
+      <p class="counter" id="PostTitle-counter">0文字 / 30文字</p>
+
+      <div class="PostImage-form-wrapper">
+        <%= form.label :記事画像, {class: "form-label PostImage-label"} %>
+        <%= form.file_field :image_post, {class: "form-field PostImage-field"} %>
+      </div>
+
+      <div class="PostPlace-form-wrapper">
+        <%= form.label :地名, {class: "form-label"} %>
+        <%= form.text_field :place, {class: "form-field PostPlace-field",
+                                     id: "PostPlace",
+                                     maxlength: 10} %>
+        <p class="counter" id="PostPlace-counter">0文字 / 10文字</p>
+      </div>
+
+      <div class="PostOverview-form-wrapper">
+        <%= form.label :概要, {class: "form-label PostOverview-label"} %>
+        <%= form.text_area :overview, {class: "form-field PostOverview-field",
+                                       id: "PostOverview",
+                                       maxlength: 100} %>
+        <p class="counter" id="PostOverview-counter">0文字 / 100文字</p>
+      </div>
+
+
+      <div id="SpotCreate-form-wrapper">
+        <%= form.fields_for :spots do |spot| %>
+          <%= render 'spot_fields', f: spot %>
+        <% end %>
+      </div>
+
+      <%= link_to_add_association form, :spots, id: "add-link",
+        data:{
+          association_insertion_node: '#SpotCreate-form-wrapper',
+          association_insertion_method: 'append'
+        } do %>
+        <i class="fas fa-plus">スポット追加</i>
+      <% end %>
+
+      <%= form.submit "投稿", {class: "btn PostCreate-btn"} %>
+
+    </div>
+
+  <% end %>
+
+</div>

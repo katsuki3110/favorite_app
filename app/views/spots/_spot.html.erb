@@ -1,0 +1,21 @@
+<div class="Spot-item">
+  <div class="Spot-place-wrapper">
+    <%= spot.place %>
+  </div>
+
+  <div class="Spot-contents-wrapper">
+    <div class="Spot-image-wrapper">
+      <% if @post.image_post.present? %>
+        <%= image_tag(spot.image_spot_url, class: "Spot-image") %>
+      <% else %>
+        <div class="Spot-image">No Image</div>
+      <% end %>
+    </div>
+
+    <div class="Spot-explaine-wrapper">
+      <%= spot.explaine %>
+    </div>
+  </div>
+
+
+</div>

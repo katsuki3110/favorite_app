@@ -1,0 +1,26 @@
+<div class="PostIndex-item">
+  <div class="PostIndex-image-wrapper">
+    <% if post.image_post.present? %>
+      <%= image_tag(post.image_post_url(:thumb), class: "PostIndex-image") %>
+    <% else %>
+      <div class="PostIndex-image">No Image</div>
+    <% end %>
+  </div>
+
+  <div class="PostIndex-title-wrapper">
+    <%= link_to post.title, post_path(post), {class: "Link"} %>
+  </div>
+  <div class="PostIndex-info">
+    <i class="fas fa-pencil-alt"></i>
+    <%= l post.created_at %>
+    <i class="fas fa-map-marker-alt"></i>
+    <%= post.place %>
+
+    <% if logged_in? && post.users.find_by(id: current_user.id).present? %>
+      <i class="fas fa-star yellow"></i>
+    <% else %>
+      <i class="far fa-star"></i>
+    <% end %>
+    <%= post.likes.count %>
+  </div>
+</div>

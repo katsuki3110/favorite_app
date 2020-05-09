@@ -1,9 +1,43 @@
 <header>
-  <div class="container">
-    <%= link_to "timeline", root_path %>
-    <ul>
-      <li><%= link_to "SignUp", signup_path %></li>
-      <li><%= link_to "Login", "#" %></li>
+  <div class="header-container">
+
+    <div class="header-left">
+      <%= link_to "Title", root_path, {class: "Link TitleLink"} %>
+    </div>
+
+    <ul class="header-center">
+      <li><%= link_to "タイムライン", posts_path, {class: "Link centerLink"} %></li>
+      <li>
+        <%= form_with(url: users_serch_path, local: true, method: :get) do |form| %>
+          <%= form.text_field :name, {class: "UserSerch-Field"} %>
+          <%= form.submit "ユーザー検索", {class: "btn UserSerch-btn"} %>
+        <% end %>
+      </li>
+      <li>
+        <%= form_with(url: posts_serch_path, local: true, method: :get) do |form| %>
+          <%= form.text_field :place, {class: "PostSerch-Field"} %>
+          <%= form.submit "スポット検索", {class: "btn PostSerch-btn"} %>
+        <% end %>
+      </li>
     </ul>
+
+    <ul class="header-right">
+      <% if logged_in? %>
+        <!-- admin権限あるアカウントは原則削除しない -->
+        <% unless current_user.admin? %>
+          <li><%= link_to "退会", user_path(current_user), method: :delete,
+                                                          class: "Link rightLink",
+                                                          data:{confirm: "本当に退会しますか？"} %></li>
+        <% end %>
+        <li><%= link_to "設定", setting_user_path(current_user), {class: "Link rightLink"} %></li>
+        <li><%= link_to "ログアウト", logout_path, {class: "Link rightLink", method: :delete} %></li>
+        <li><%= link_to "マイページ", user_path(current_user), {class: "Link rightLink"} %></li>
+        <li><%= link_to "投稿", new_post_path, {class: "Link rightLink"} %></li>
+      <% else %>
+        <li><%= link_to "新規登録", new_user_path, {class: "Link rightLink"} %></li>
+        <li><%= link_to "ログイン", login_path, {class: "Link rightLink"} %></li>
+      <% end %>
+    </ul>
+
   </div>
 </header>

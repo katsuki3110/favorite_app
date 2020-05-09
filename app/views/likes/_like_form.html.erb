@@ -1,0 +1,19 @@
+<div>
+  <% if !current_user.nil? && @post.likes.find_by(user_id: current_user.id) %>
+    <div class="likeBtn-wrapper">
+      <%= link_to like_path(@post), method: :delete,
+                                    class: " like liked_btn",
+                                    remote: true do %>
+      <i class="far fa-star">お気に入り済み</i>
+      <% end %>
+    </div>
+  <% else %>
+    <div class="likeBtn-wrapper">
+      <%= link_to likes_path(post_id: @post.id), {method: :post,
+                                                  class: "like liking_btn",
+                                                  remote: true} do %>
+        <i class="far fa-star">お気に入りする</i>
+      <% end %>
+    </div>
+  <% end %>
+</div>

@@ -1,0 +1,36 @@
+// Place all the styles related to the relationships controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+#follow_btn{
+  /*margin-left: 790px;*/
+  margin-left: 400px;
+}
+
+.follow_btn{
+  font-size: 15px;
+  font-weight: bold;
+  border-radius: 100px;
+  text-decoration: none;
+}
+
+.following{
+  background-color: white;
+  color: #a1887f;
+  border: 1px solid #a1887f;
+  padding: 10px 200px 6px 200px;
+}
+
+.followed{
+  background-color: #a1887f;
+  color: white;
+  padding: 10px 210px 6px 210px;
+}
+
+.follow_btn:hover{
+  opacity: 0.7;
+}
+
+#follows{
+  /*font-size: 20px;*/
+}
