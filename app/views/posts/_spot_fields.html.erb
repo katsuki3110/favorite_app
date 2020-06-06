@@ -1,7 +1,7 @@
 <div class="nested-fields">
 
-  <%= link_to_remove_association f do %>
-    <i class="fas fa-2x fa-times remove-link"></i>
+  <%= link_to_remove_association f, {class: "remove-link"} do %>
+    <i class="fas fa-2x fa-times"></i>
   <% end %>
 
   <%= f.label :スポット名, {class: "form-label"} %>

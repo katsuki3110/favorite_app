@@ -5,7 +5,7 @@
 
   <div class="Spot-contents-wrapper">
     <div class="Spot-image-wrapper">
-      <% if @post.image_post.present? %>
+      <% if spot.image_spot.present? %>
         <%= image_tag(spot.image_spot_url, class: "Spot-image") %>
       <% else %>
         <div class="Spot-image">No Image</div>
