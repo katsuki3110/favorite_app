@@ -1,12 +1,10 @@
-<h1>Title</h1>
+<h1>favorite-app</h1>
 
-<p>こんにちは、<%= @user.name %></p>
-
-<p>
-ようこそ、Titleへ！！
-</p>
+<p>こんにちは、<%= @user.name %></p>さん
 
 <p>
-下記のリンクをクリックし、アカウントを有効にしてください↓↓
-<%= link_to "有効にする", edit_account_activation_url(@user.activation_token, email: @user.email) %>
+ようこそ、favorite-appへ！！
 </p>
+
+<p>下記のリンクをクリックし、アカウントを有効にしてください↓↓</p>
+<p><%= link_to "アカウントを有効にする", edit_account_activation_url(@user.activation_token, email: @user.email) %></p>

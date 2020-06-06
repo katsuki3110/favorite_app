@@ -7,6 +7,6 @@ class UserMailer < ApplicationMailer
   #
   def account_activation(user)
     @user = user
-    mail to: user.email, subject: "アカウントの有効化"
+    mail to: user.email, subject: "【favorite-app】アカウントの有効化のご連絡"
   end
 end

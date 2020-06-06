@@ -2,6 +2,9 @@ require 'test_helper'
 
 class UserSignupTest < ActionDispatch::IntegrationTest
 
+  def setup
+    ActionMailer::Base.deliveries.clear
+  end
 
   test "新規登録をする（パラメータ不適切）" do
    get new_user_path
