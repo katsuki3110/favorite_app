@@ -1,6 +1,6 @@
 # Favorite_app
 
-[Heroku](https://favorite-app.herokuapp.com/)はこちら
+[Heroku](https://favorite-spot-app.herokuapp.com/)はこちら
 
 ### 概要
   ⇒ 自身が知っているお気に入りのモデルコースを発信するSNSサイト。
